@@ -53,6 +53,29 @@ public class PlaneManagement {
         }
         sc.close();
     }
+
+    // method for booking
+    public static void buy_seat(int a) {
+        String row_letter = rowLetter();
+        int seat_number = seatNumber(String .valueOf(row_letter));
+
+        // asking person information
+        System.out.print("\nEnter your name: ");
+        String person_name = sc.nextLine();
+        System.out.print("Enter your surname: ");
+        String person_surname = sc.nextLine();
+        System.out.print("Enter your email: ");
+        String person_email = sc.nextLine();
+
+        // calculate the seat price
+        double seat_price = 0;
+        if(seat_number <= 5){
+            seat_price = 200;
+        }else if(seat_number <= 9){
+            seat_price = 150;
+        }else if(seat_number <= 14){
+            seat_price = 180;
+        }
 }
 
     
