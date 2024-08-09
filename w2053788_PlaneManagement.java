@@ -1,5 +1,5 @@
 import java.util.*;
-public class PlaneManagement {
+public class w2053788_PlaneManagement {
     // 2D array for store seating plan
     public static int[][] seat_management = {
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -54,6 +54,7 @@ public class PlaneManagement {
         sc.close();
     }
 
+
     // method for booking
     public static void buy_seat(int a) {
         String row_letter = rowLetter();
@@ -76,6 +77,8 @@ public class PlaneManagement {
         }else if(seat_number <= 14){
             seat_price = 180;
         }
-}
 
-    
+        // person object
+        Person person = new Person(person_name, person_surname, person_email);
+        // ticket object
+        Ticket ticket1 = new Ticket(row_letter, seat_number, seat_price, person);
